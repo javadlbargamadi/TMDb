@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#ffc107">
+    android:background="#ffc107"
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:layout_centerInParent="true"
-            app:cardBackgroundColor="#000"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#000"
+            app:cardCornerRadius="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,26 +27,119 @@
 
                 <EditText
                     android:id="@+id/edtUserMovie"
-                    android:layout_margin="10dp"
-                    android:textAlignment="center"
-                    android:textSize="30sp"
-                    android:textColorHint="#757575"
-                    android:hint="movie name"
-                    android:textColor="#FFC107"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:hint="movie name"
+                    android:textAlignment="center"
+                    android:textColor="#FFC107"
+                    android:textColorHint="#757575"
+                    android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/btnSearch"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button_shape_selector"
-                    android:textSize="20sp"
-                    android:text="search"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_shape_selector"
+                    android:text="search"
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="The TMDb Advantage"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="9"
+            android:background="#000"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Every year since 2008, the number of contributions to our database has increased. With over 200,000 developers and companies using our platform, TMDb has become a premiere source for metadata."
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Trusted platform. Every single day our service is used by millions of people while we process over 3 billion requests. We've proven for years that this is a service that can be trusted and relied on."
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="We're international. While we officially support 39 languages we also have extensive regional data. Every single day TMDb is used in over 180 countries."
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Our community is second to none. Between our staff and community moderators, we're always here to help. We're passionate about making sure your experience on TMDb is nothing short of amazing."
+                android:textAlignment="center"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Our community is second to none. Between our staff and community moderators, we're always here to help. We're passionate about making sure your experience on TMDb is nothing short of amazing."
+                android:textAlignment="center"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="#000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Developed By: Javad Bargamadi"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -52,9 +52,9 @@ class MovieSearchResultActivity : AppCompatActivity() {
 //                recyclerView.adapter = RecyclerViewAdapterClass(it.results)
 //                recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
                 }, {
-
+                    Toast.makeText(this,it.message,Toast.LENGTH_LONG).show()
                 }, {
-
+                    Toast.makeText(this,"api call : successful",Toast.LENGTH_LONG).show()
                 })
         )
 //

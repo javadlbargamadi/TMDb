@@ -6,15 +6,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitProviderClass {
 
-    companion object {
+        companion object {
 
-        fun provideRetrofit(): TMDBInterface {
-            val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.themoviedb.org/3/search/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build()
-            return retrofit.create(TMDBInterface::class.java)
+            fun provideRetrofit(): TMDBInterface {
+                val retrofit = Retrofit.Builder()
+                    .baseUrl("https://api.themoviedb.org/3/search/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .build()
+                return retrofit.create(TMDBInterface::class.java)
+            }
         }
-    }
 }
